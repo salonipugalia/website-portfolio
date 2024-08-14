@@ -1,0 +1,44 @@
+.icon {
+    position: absolute;
+    width: 110px;
+    height: 130px;
+    border-bottom-right-radius: 98px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    overflow: visible;
+  }
+  
+  @font-face {
+    font-family: code;
+    src: url(../monocode.ttf);
+  }
+  
+  .first {
+    position: relative;
+  }
+  
+  .content {
+    position: relative;
+  }
+  
+  p {
+    font-family: code;
+    padding-top: 10px;
+    padding-bottom: 30px;
+  }
+  
+  #firstp {
+    padding-left: 130px;
+  }
+  
+  p span {
+    animation: typewriter 0.1s steps(1) forwards;
+  }
+  
+  @keyframes typewriter {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }

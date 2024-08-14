@@ -1,0 +1,110 @@
+* {
+  overflow: hidden;
+}
+
+@keyframes bounce-in-right {
+  0% {
+    transform: translateX(600px);
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    transform: translateX(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+  55% {
+    transform: translateX(68px);
+    animation-timing-function: ease-in;
+  }
+  72% {
+    transform: translateX(0);
+    animation-timing-function: ease-out;
+  }
+  81% {
+    transform: translateX(32px);
+    animation-timing-function: ease-in;
+  }
+  90% {
+    transform: translateX(0);
+    animation-timing-function: ease-out;
+  }
+  95% {
+    transform: translateX(8px);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateX(0);
+    animation-timing-function: ease-out;
+  }
+}
+
+#overlay2 {
+  height: 60%;
+  width: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  position: absolute;
+  top: 20%;
+  right: 2%;
+  border-radius: 100px;
+  z-index: 10;
+  backdrop-filter: blur(2px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  animation: bounce-in-right 2s forwards;
+  overflow: visible; /* Allow content overflow */
+}
+
+.img-container {
+  position: relative; /* Ensure relative positioning for the container */
+  cursor: pointer;
+}
+
+.tooltip {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 10px); /* Position the tooltip above the parent container */
+  transform: translateX(-50%);
+  background-color: #000;
+  color: #fff;
+  white-space: nowrap;
+  padding: 2px;
+  border-radius: 7px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 999; /* Ensure tooltip is above other elements */
+  max-width: 200px; /* Set maximum width */
+  overflow: visible; /* Allow content overflow */
+}
+
+.tooltip::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: #000; /* Adjust the color as needed */
+}
+
+.img-container:hover .tooltip {
+  top:0%;
+  visibility: visible;
+  opacity: 1;
+}
+
+.img-container:hover {
+  box-shadow: 0 0 10px black; /* Correctly set box-shadow with offsets and color */
+ border-radius: 10%;
+}
+
+.pic {
+  position: relative;
+  display: inline;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}

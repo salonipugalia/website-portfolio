@@ -1,0 +1,12 @@
+.contact-container {
+    background: linear-gradient(180.3deg, rgb(221, 221, 221) 5.5%, rgb(110, 136, 161) 90.2%);
+    height: 100vh;
+    position: relative; /* Added to make the canvas cover the entire container */
+}
+canvas#contact-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

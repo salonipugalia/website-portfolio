@@ -1,0 +1,14 @@
+.blog-container {
+    background: linear-gradient(180.3deg, rgb(221, 221, 221) 5.5%, rgb(110, 136, 161) 90.2%);
+    height: 100vh;
+    position: relative;
+    overflow: hidden; /* Ensures the canvas covers the entire container */
+}
+
+canvas#blog-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

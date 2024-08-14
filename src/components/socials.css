@@ -1,0 +1,25 @@
+#socials {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    bottom: 7%; /* Adjusted to a smaller value */
+    left: 15%; /* Adjusted to a smaller value */
+    justify-content: space-around;
+    width: 200px; /* Adjusted the width */
+    
+  }
+
+  #pics:hover {
+    box-shadow: 0 02px black; /* Correctly set box-shadow with offsets and color */
+  
+  }
+  
+  #pics {
+    border-radius: 20%;
+    height: 45px; /* Adjusted the height */
+    width: 45px; /* Adjusted the width */
+    cursor: pointer;
+    padding: 4px;
+   
+  }
+  

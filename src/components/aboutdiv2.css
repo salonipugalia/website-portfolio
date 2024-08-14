@@ -1,0 +1,98 @@
+.about-div.second {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    border-radius: 10%;
+    position: relative;
+    animation: float 1s infinite alternate-reverse ease-in-out;
+    bottom: 0;
+    z-index: 9;
+}
+
+@keyframes float {
+    0% {
+        bottom: -10px;
+    }
+    100% {
+        bottom: 10px;
+    }
+}
+
+.clicks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    z-index: 10;
+}
+
+.img-containerabt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+    transition: box-shadow 0.3s, border 0.3s, background-color 0.5s ease-in-out; /* Added background-color transition */
+    position: relative;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 10%;
+}
+
+.img-containerabt::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(72, 89, 104, 0.6); /* Black color with opacity */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out; /* Smooth background fill animation */
+    z-index: -1;
+}
+
+.img-containerabt:hover::before {
+    transform: scaleX(1); /* Fill the background on hover */
+}
+
+.img-containerabt.selected::before {
+    transform: scaleX(1); /* Keep the background filled when selected */
+}
+
+.img-containerabt.selected {
+  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Highlight selected image with shadow */
+}
+
+.picabt {
+    height: 50px;
+    width: 50px;
+    z-index: 1;
+}
+
+.picabt:hover {
+    cursor: pointer;
+}
+
+.content2{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    overflow: visible;
+}
+
+.content-block {
+    border: 0;
+   
+    position: relative;
+   background-color:#ffffff2a;
+    border-radius: 100px;
+    width: 100%;
+    height: 70%;
+    overflow: visible;
+   
+}
+
+h6 {
+    padding-top: 6px;
+    z-index: 1;
+}

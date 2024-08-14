@@ -1,0 +1,115 @@
+/* Container for the orbiting circles animation */
+.skillsec {
+  display: flex;
+ 
+}
+
+.skillwr {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+ width: 22%;
+}
+
+.sk {
+  padding: 2%;
+  }
+
+
+#circle-orbit-container {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    overflow: visible;
+    top: 40px;
+    left: 15px;
+    
+    
+  }
+  
+  /* Inner orbit - closest to the central point */
+  #inner-orbit {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 30%;
+    height: 30%;
+    border: 2px #4a437f dashed;
+    border-radius: 50%;
+    animation: spin-right 10s linear infinite;
+    overflow: visible;
+  }
+  
+  /* Middle orbit - second closest to the central point */
+  #middle-orbit {
+    position: absolute;
+    top: 12.5%;
+    left: 12.5%;
+    width: 55%;
+    height: 55%;
+    border: 2px #4a437f dashed;
+    border-radius: 50%;
+    animation: spin-right 15s linear infinite;
+    overflow: visible;
+  }
+  
+  /* Outer orbit - furthest from the central point */
+  #outer-orbit {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 75%;
+    height: 75%;
+    border: 2px #4a437f dashed;
+    border-radius: 50%;
+    animation: spin-right 20s linear infinite;
+    overflow: visible;
+  }
+  
+  /* Skill planets */
+  .skill-planet {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    transform: translate(-50%, -50%); 
+  }
+  
+  .skill-planet img {
+    height: 35px;
+    width: 35px;
+    
+    border-radius: 50%;
+  }
+  
+  /* Positioning the planets evenly around the orbits */
+  .inner-orbit-circles .skill-planet1 { top: 0%; left: 50%; }
+  .inner-orbit-circles .skill-planet2 { top: 38.2%; left: 92.4%; }
+  .inner-orbit-circles .skill-planet3 { top: 100%; left: 50%; }
+  .inner-orbit-circles .skill-planet4 { top: 40.2%; left: 3.6%; }
+  .inner-orbit-circles .skill-planet5 { top: 50%; left: 50%; }
+  
+  .middle-orbit-circles .skill-planet6 { top: 0%; left: 50%; }
+  .middle-orbit-circles .skill-planet7 { top: 20%; left: 89.5%; }
+  .middle-orbit-circles .skill-planet8 { top: 77%; left: 85.5%; }
+  .middle-orbit-circles .skill-planet9 { top: 100%; left: 50%; }
+  .middle-orbit-circles .skill-planet11 { top: 30%; left: 3.5%; }
+  
+  .outer-orbit-circles .skill-planet12 { top: 0%; left: 50%; }
+  .outer-orbit-circles .skill-planet13 { top: 40.1%; left: 0.4%; }
+  .outer-orbit-circles .skill-planet14 { top: 65.8%; left: 96.4%; }
+  .outer-orbit-circles .skill-planet15 { top: 97.8%; left: 40.4%; }
+  
+  /* Animation */
+  @keyframes spin-right {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
